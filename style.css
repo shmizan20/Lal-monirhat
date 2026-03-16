@@ -1224,79 +1224,7 @@ ul {
     flex-shrink: 0;
 }
 
-.lang-switcher-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-muted);
-}
 
-.lang-btn {
-    padding: 2px 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-    background: transparent;
-    color: var(--text-muted);
-    font-family: inherit;
-    position: relative;
-    opacity: 0.6;
-}
-
-.lang-btn:hover {
-    color: var(--primary);
-    opacity: 1;
-}
-
-.lang-btn.active {
-    color: var(--primary);
-    opacity: 1;
-}
-
-.lang-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 4px;
-    right: 4px;
-    height: 2px;
-    background: var(--primary);
-    border-radius: 10px;
-}
-
-.lang-divider {
-    width: 1px;
-    height: 14px;
-    background: #e2e8f0;
-}
-
-/* Google Translate Hiding */
-.skiptranslate.goog-te-banner-frame {
-    visibility: hidden !important;
-    display: none !important;
-}
-
-.goog-te-gadget {
-    display: none !important;
-}
-
-#google_translate_element {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    opacity: 0.01;
-    pointer-events: none;
-    z-index: -1;
-}
-
-body {
-    top: 0px !important;
-}
 
 .news-card-content {
     padding: 30px;

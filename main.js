@@ -148,51 +148,69 @@ function setTranslateCookie(lang) {
 }
 
 function changeLanguage(lang) {
-    // 1. Update UI
-    const btns = document.querySelectorAll('.lang-btn');
-    btns.forEach(btn => {
-        const label = btn.innerText.toLowerCase();
-        if ((lang === 'bn' && label.includes('বাং')) || (lang === 'en' && label.includes('en'))) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
-    // 2. Set Cookie & Storage
+    if (!lang) return;
+    
+    // 1. Set Storage & Cookie
     localStorage.setItem('selectedLang', lang);
     setTranslateCookie(lang);
 
-    // 3. Trigger Translation via Widget
+    // 2. Update UI (All instances across page)
+    const btns = document.querySelectorAll('.lang-btn');
+    btns.forEach(btn => {
+        const label = btn.innerText.toLowerCase();
+        const isTarget = (lang === 'bn' && (label.includes('বাং') || label.includes('bn'))) || 
+                         (lang === 'en' && label.includes('en'));
+        btn.classList.toggle('active', isTarget);
+    });
+
+    // 3. Trigger Translation
     const select = document.querySelector('.goog-te-combo');
     if (select) {
         select.value = lang;
         select.dispatchEvent(new Event('change'));
     } else {
-        // Fallback for first-time load: reload with the cookie/hash set
-        window.location.hash = `#googtrans(bn|${lang})`;
-        location.reload();
+        // Force hash and reload if widget not ready
+        const targetHash = `#googtrans(bn|${lang})`;
+        if (window.location.hash !== targetHash) {
+            window.location.hash = targetHash;
+            location.reload();
+        }
     }
 }
 
 // Check for saved language on load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLang');
-    if (savedLang && savedLang !== 'bn') {
-        // Update UI immediately
+    const savedLang = localStorage.getItem('selectedLang') || 'bn';
+    
+    // Always sync UI on load
+    const syncUI = (lang) => {
         const btns = document.querySelectorAll('.lang-btn');
         btns.forEach(btn => {
-            if (btn.innerText.toLowerCase().includes('en')) btn.classList.add('active');
-            else btn.classList.remove('active');
+            const label = btn.innerText.toLowerCase();
+            const isTarget = (lang === 'bn' && (label.includes('বাং') || label.includes('bn'))) || 
+                             (lang === 'en' && label.includes('en'));
+            btn.classList.toggle('active', isTarget);
         });
+    };
 
-        // Wait for Google Translate but don't force reload if it doesn't load
-        setTimeout(() => {
+    syncUI(savedLang);
+
+    if (savedLang !== 'bn') {
+        // Retry logic for Google Translate element
+        let retries = 0;
+        const maxRetries = 10;
+        
+        const initTranslate = () => {
             const select = document.querySelector('.goog-te-combo');
             if (select) {
                 select.value = savedLang;
                 select.dispatchEvent(new Event('change'));
+            } else if (retries < maxRetries) {
+                retries++;
+                setTimeout(initTranslate, 500);
             }
-        }, 1500);
+        };
+        
+        setTimeout(initTranslate, 1000);
     }
 });

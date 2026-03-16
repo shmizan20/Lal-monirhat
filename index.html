@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লালমনিরহাট জেলা সমিতি, ঢাকা</title>
+    <meta name="description"
+        content="Official website of Lalmonirhat Zila Samiti, Dhaka. The symbol of unity for Lalmonirhat residents living in Dhaka.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="news-ticker">
+                    <span class="ticker-label">Notice:</span>
+                    <div class="ticker-content">
+                        লালমনিরহাট জেলা সমিতি, ঢাকা'র উদ্যোগে "জাগো বাহে তিস্তা বাঁচাই" শ্লোগানে মানববন্ধন ১৪ নভেম্বর
+                        ২০২৫, শুক্রবার, সকাল-১০.০০ ঘটিকায়। স্থান- মানিক মিয়া এভিনিউ, ঢাকা।
+                    </div>
+                </div>
+                <div class="top-contacts">
+                    <a href="tel:01717229460"><i class="fas fa-phone-alt"></i> ০১৭১৭-২২৯৪৬০</a>
+                    <a href="mailto:shah.bangla15@gmail.com"><i class="fas fa-envelope"></i> shah.bangla15@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="./assets/img/logo.png" alt="LZSD Logo">
+                    <span>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">প্রচ্ছদ</a></li>
+                    <li class="dropdown">
+                        <a href="#">সমিতি সম্পর্কে <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                            <li><a href="history.html">সমিতির প্রতিষ্ঠার কথা</a></li>
+                            <li><a href="founder-president.html">প্রতিষ্ঠাতা সভাপতি</a></li>
+                            <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                            <li><a href="./assets/gothontontro.pdf" download><i class="fas fa-download" style="margin-right:6px;color:var(--primary)"></i>গঠনতন্ত্র ডাউনলোড</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">প্রকল্প সমূহ</a></li>
+                    <li><a href="registration.html">সদস্যপদ</a></li>
+                    <li><a href="members.html">সদস্যবৃন্দ</a></li>
+                    <li><a href="gallery.html">গ্যালারী</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li>
+                </ul>
+
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-actions">
+                    <div class="lang-switcher-wrapper">
+                        <button class="lang-btn active" onclick="changeLanguage('bn')">বাং</button>
+                        <div class="lang-divider"></div>
+                        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                    <!-- Hidden Google Translate Element -->
+                    <div id="google_translate_element" style="display:none"></div>
+                    <a href="registration.html" class="btn btn-primary">সদস্য হোন</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Modern Clean Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>স্থাপিত ১৯৮১ | ঢাকার বুকে লালমনিরহাট</span>
+                    </div>
+                    <h1>ঐক্যের বন্ধনে <span>লালমনিরহাট জেলা সমিতি</span></h1>
+                    <p>লালমনিরহাট জেলা বাংলাদেশের উত্তর-পশ্চিমাঞ্চলের রংপুর বিভাগের একটি জেলা। এটি ২৫°৪৬' উত্তর অক্ষাংশ থেকে
+                        ২৬°৩৩' উত্তর অক্ষাংশ এবং ৮৯°০১' পূর্ব দ্রাঘিমাংশ থেকে ৮৯°৩৬' পূর্ব দ্রাঘিমাংশের মধ্যে অবস্থিত।</p>
+
+                    <div class="hero-btns">
+                        <a href="registration.html" class="btn btn-primary">সদস্য পদ গ্রহণ করুন</a>
+                        <a href="about-district.html" class="btn btn-secondary">বিস্তারিত জানুন</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual-container">
+                    <!-- Floating UI Cards -->
+                    <div class="floating-ui pos-1">
+                        <div class="ui-card-glass">
+                            <div class="icon-box"><i class="fas fa-users"></i></div>
+                            <div class="text">১০০০+ অ্যাক্টিভ মেম্বার</div>
+                        </div>
+                    </div>
+                    <div class="floating-ui pos-2">
+                        <div class="ui-card-glass">
+                            <div class="icon-box"><i class="fas fa-heart"></i></div>
+                            <div class="text">আস্থার ৪৪ বছর</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-image-wrapper">
+                        <div class="hero-slider">
+                            <div class="slide active">
+                                <img src="./assets/img/slider-1.png" alt="Teesta Barrage, Lalmonirhat">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/img/slider-2.png" alt="Sunset Bridge, Lalmonirhat">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/img/slider-3.png" alt="Lush Park, Lalmonirhat">
+                            </div>
+                        </div>
+                        <!-- Slider Dots -->
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redesigned Stats/Impact Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>১৯৮১</h3>
+                        <p>প্রতিষ্ঠিত</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>১৬৬৪</h3>
+                        <p>সরকারি নিবন্ধন নং</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>১০০০+</h3>
+                        <p>অ্যাক্টিভ মেম্বার</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>৫টি</h3>
+                        <p>উপজেলাসমূহ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- High-Impact Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-split">
+                    <div class="mission-text">
+                        <h2>আমাদের লক্ষ্য</h2>
+                        <p>লালমনিরহাট জেলা সমিতি কেবল একটি সংগঠন নয়, এটি ঢাকার বুকে লালমনিরহাটের মানুষের একটি আশ্রয়স্থল। আমরা ১৯৮১ সাল থেকে একযোগে কাজ করে যাচ্ছি জেলার উন্নতি ও পারস্পরিক ভ্রাতৃত্ব বজায় রাখতে।</p>
+                    </div>
+                    <div class="objective-list">
+                        <div class="objective-item">
+                            <div class="obj-icon"><i class="fas fa-users"></i></div>
+                            <div class="obj-content">
+                                <h4>পারস্পরিক সহযোগিতা</h4>
+                                <p>ঢাকায় বসবাসরত বাসিন্দাদের মধ্যে শক্তিশালী সাংগঠনিক নেটওয়ার্কিং গড়ে তোলা।</p>
+                            </div>
+                        </div>
+                        <div class="objective-item">
+                            <div class="obj-icon"><i class="fas fa-history"></i></div>
+                            <div class="obj-content">
+                                <h4>ঐতিহ্য সংরক্ষণ</h4>
+                                <p>নতুন প্রজন্মের কাছে লালমনিরহাটের বৈচিত্র্যময় সংস্কৃতি ও ইতিহাস পরিচিত করা।</p>
+                            </div>
+                        </div>
+                        <div class="objective-item">
+                            <div class="obj-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="obj-content">
+                                <h4>সর্বজনীন উন্নয়ন</h4>
+                                <p>শিক্ষার্থীদের সহায়তা এবং জেলার সামগ্রিক অবকাঠামো উন্নয়নে ভূমিকা রাখা।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Bento Grid Activities/Pillars -->
+        <section class="pillars-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>আমাদের কার্যক্রম ও সেবাসমূহ</h2>
+                    <p>বিস্তৃত পরিসরে আমরা যে সকল সামাজিক ও মানবিক কার্যক্রম পরিচালনা করছি</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Column 1: Tall Box - Cultural -->
+                    <div class="bento-item bento-tall">
+                        <div class="bento-icon"><i class="fas fa-masks-theater"></i></div>
+                        <h3>সাংস্কৃতিক বন্ধন</h3>
+                        <p style="margin-bottom: 20px; color: var(--text-muted);">আমাদের ঐতিহ্যকে ধরে রাখতে আমরা নিয়মিত আয়োজন করি:</p>
+                        <ul class="bento-list">
+                            <li>বার্ষিক পুনর্মিলনী (Reunion)</li>
+                            <li>পিঠা উৎসব ও বৈশাখী মেলা</li>
+                            <li>নাট্য ও লোকসংগীত অনুষ্ঠান</li>
+                            <li>স্থানীয় শিল্পীদের বিশেষ সম্মাননা</li>
+                            <li>সাংস্কৃতিক প্রতিযোগিতা</li>
+                            <li>ইফতার ও দোয়া মাহফিল</li>
+                            <li>গুণীজন সংবর্ধনা সভা</li>
+                            <li>ঐতিহ্য ও লোকজ মেলা</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2-3 Top: Wide Box - Future Plans -->
+                    <div class="bento-item bento-wide bento-accent">
+                        <div class="bento-icon"><i class="fas fa-map-location-dot"></i></div>
+                        <h3>ভবিষ্যৎ পরিকল্পনা</h3>
+                        <ul class="bento-list" style="display: grid; grid-template-columns: repeat(3, max-content); gap: 0 40px;">
+                            <li>স্থায়ী কার্যালয় স্থাপন</li>
+                            <li>আধুনিক হেল্পলাইন চালু</li>
+                            <li>ঢাকায় গেস্ট হাউজ সুবিধা</li>
+                            <li>লালমনিরহাট স্কলার সম্মাননা</li>
+                            <li>ফ্রি অ্যাম্বুলেন্স সেবা</li>
+                            <li>স্মার্ট মেম্বারশিপ কার্ড</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 Bottom: Standard Box - Humanitarian -->
+                    <div class="bento-item">
+                        <div class="bento-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3>মানবিক সহায়তা</h3>
+                        <ul class="bento-list">
+                            <li>দূর্যোগে জরুরি ত্রাণ বিতরণ</li>
+                            <li>চিকিৎসা ও আর্থিক সাহায্য</li>
+                            <li>রক্তদান কর্মসূচি পালন</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 Bottom: Standard Box - Education -->
+                    <div class="bento-item">
+                        <div class="bento-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>শিক্ষা ও ক্যারিয়ার</h3>
+                        <ul class="bento-list">
+                            <li>নতুনদের আবাসন সহায়তা</li>
+                            <li>উচ্চশিক্ষায় বিশেষ বৃত্তি</li>
+                            <li>ক্যারিয়ার গাইডলাইন সভা</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Redesigned News Section -->
+        <section class="section news">
+            <div class="container">
+                <div class="section-header">
+                    <h2>সাম্প্রতিক খবর ও নোটিশ</h2>
+                    <p> সমিতির সর্বশেষ কার্যক্রম এবং গুরুত্বপূর্ণ ঘোষণাগুলো এখানে দেখুন</p>
+                </div>
+
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-card-img" style="background-image: url('./assets/img/news-1.png');">
+                            <span class="news-badge">ইভেন্ট</span>
+                        </div>
+                        <div class="news-card-content">
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar-alt"></i> ১৪ নভেম্বর, ২০২৫</span>
+                            </div>
+                            <h4>"জাগো বাহে তিস্তা বাঁচাই" মানববন্ধন ও প্রতিবাদ সমাবেশ</h4>
+                            <p>তিস্তা নদী রক্ষায় এবং আমাদের প্রাণের দাবীতে মানিক মিয়া এভিনিউতে এক বিশাল মানববন্ধনের আয়োজন করা হয়েছে।</p>
+                            <a href="#" class="read-more">বিস্তারিত পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-card-img" style="background-image: url('./assets/img/news-2.png');">
+                            <span class="news-badge" style="background: var(--primary); color: white;">সাধারণ</span>
+                        </div>
+                        <div class="news-card-content">
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar-alt"></i> ০৫ অক্টোবর, ২০২৪</span>
+                            </div>
+                            <h4>বার্ষিক সাধারণ সভা ২০২৪ এবং নতুন মেম্বারশিপ আপডেট</h4>
+                            <p>সমিতির কার্যনির্বাহী কমিটির সভায় আগামী বছরের বড় প্রকল্পগুলো এবং নতুন সদস্যদের অন্তর্ভুক্তির বিষয়ে আলোচনা হয়েছে।</p>
+                            <a href="#" class="read-more">বিস্তারিত পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-card-img" style="background-image: url('./assets/img/news-3.png');">
+                            <span class="news-badge" style="background: #ef4444; color: white;">জরুরি</span>
+                        </div>
+                        <div class="news-card-content">
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar-alt"></i> ১২ সেপ্টেম্বর, ২০২৪</span>
+                            </div>
+                            <h4>উচ্চশিক্ষায় বিশেষ বৃত্তি প্রকল্পের আবেদন শুরু</h4>
+                            <p>লালমনিরহাট জেলার মেধাবী শিক্ষার্থীদের জন্য ঢাকা সমিতির পক্ষ থেকে শিক্ষা বৃত্তির আবেদন আহ্বান করা হচ্ছে।</p>
+                            <a href="#" class="read-more">বিস্তারিত পড়ুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redesigned Video Gallery Section -->
+        <section class="section video-gallery" style="background: var(--bg-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ভিডিও গ্যালারী</h2>
+                    <p>লালমনিরহাটের ঐতিহ্য ও সমিতির কার্যক্রমের এক ঝলক</p>
+                </div>
+                
+                <div class="video-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card" onclick="playVideo(this, 'OtbnrxOoA9k')">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/OtbnrxOoA9k/hqdefault.jpg" alt="Lalmonirhat District">
+                            <div class="play-overlay">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>এক নজরে লালমনিরহাট জেলা</h4>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="video-card" onclick="playVideo(this, 'kkecWrWg1a0')">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/kkecWrWg1a0/hqdefault.jpg" alt="Tourist Places">
+                            <div class="play-overlay">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>লালমনিরহাটের সেরা দর্শনীয় স্থান</h4>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="video-card" onclick="playVideo(this, 'y_w4Pr6QM0Y')">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/y_w4Pr6QM0Y/hqdefault.jpg" alt="Beautiful Lalmonirhat">
+                            <div class="play-overlay">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>সুন্দরী লালমনিরহাট</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-more-container" style="text-align: center; margin-top: 40px;">
+                    <a href="gallery.html" class="btn btn-secondary">আরও ভিডিও দেখুন</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-box" style="margin-bottom: 20px;">
+                        <img src="./assets/img/logo.png" alt="LZSD Logo" style="height: 80px; width: auto;">
+                    </div>
+                    <h3>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></h3>
+                    <p>হৃদয় থেকে শিকড়ের টান। ১৯৮১ সাল থেকে আপনাদের পাশে। আমরা ঢাকায় বসবাসরত লালমনিরহাটের সকল অধিবাসীদের একতাবদ্ধ করতে এবং জেলার উন্নয়নে প্রতিশ্রুতিবদ্ধ। লালমনিরহাটের ঐতিহ্য ও সংস্কৃতিকে তুলে ধরাই আমাদের মূল লক্ষ্য।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>দ্রুত লিঙ্ক</h4>
+                    <ul>
+                        <li><a href="index.html">প্রচ্ছদ</a></li>
+                        <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                        <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                        <li><a href="projects.html">আমাদের প্রকল্পসমূহ</a></li>
+                        <li><a href="registration.html">সদস্য পদ আবেদন</a></li>
+                        <li><a href="gallery.html">গ্যালারী</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>যোগাযোগ</h4>
+                    <p><i class="fas fa-map-marker-alt" style="color: white;"></i> ২১৮, স্যুট নং- ১২০৩-এ, সাহেরা ট্রপিক্যাল সেন্টার, Elephant Road, ঢাকা।</p>
+                    <p><i class="fas fa-phone-alt" style="color: white;"></i> ০১৭১৭-২২৯৪৬০</p>
+                    <p><i class="fas fa-envelope" style="color: white;"></i> shah.bangla15@gmail.com</p>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.285194539126!2d90.3833213!3d23.7371511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8dc4c8a0051%3A0xe5a3c0e359400000!2sElephant%20Road%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ লালমনিরহাট জেলা সমিতি, ঢাকা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Video Lightbox/Modal -->
+    <div id="videoModal" class="lightbox" onclick="closeVideoModal()">
+        <button class="lightbox-close" onclick="closeVideoModal()"><i class="fas fa-times"></i></button>
+        <div class="video-modal-container" id="videoContainer" onclick="event.stopPropagation()">
+            <!-- Iframe will be injected here -->
+        </div>
+    </div>
+
+    <script>
+        function playVideo(el, videoId) {
+            const modal = document.getElementById('videoModal');
+            const container = document.getElementById('videoContainer');
+            
+            const iframe = document.createElement('iframe');
+            // Adding mute=1 to ensure autoplay works on most browsers
+            iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&rel=0`;
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            
+            container.innerHTML = '';
+            container.appendChild(iframe);
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+
+    <script src="./assets/js/slider.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সদস্যপদ | লালমনিরহাট জেলা সমিতি, ঢাকা</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script></head>
+
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="scroll-progress"></div><div class="news-ticker">
+                    <span class="ticker-label">Notice:</span>
+                    <div class="ticker-content">
+                        নতুন সদস্যপদের আবেদনের জন্য অনলাইন ফরমটি পূরণ করুন।
+                    </div>
+                </div>
+                <div class="top-contacts"><a href="tel:01717229460"><i class="fas fa-phone-alt"></i> ০১৭১৭-২২৯৪৬০</a>
+                    <a href="mailto:shah.bangla15@gmail.com"><i class="fas fa-envelope"></i> shah.bangla15@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="./assets/img/logo.png" alt="LZSD Logo">
+                    <span>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">প্রচ্ছদ</a></li>
+                    <li class="dropdown">
+                        <a href="#">সমিতি সম্পর্কে <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                            <li><a href="history.html">সমিতির প্রতিষ্ঠার কথা</a></li>
+                            <li><a href="founder-president.html">প্রতিষ্ঠাতা সভাপতি</a></li>
+                            <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                            <li><a href="./assets/gothontontro.pdf" download><i class="fas fa-download" style="margin-right:6px;color:var(--primary)"></i>গঠনতন্ত্র ডাউনলোড</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">প্রকল্প সমূহ</a></li>
+                    <li><a href="registration.html" class="active">সদস্যপদ</a></li>
+                    <li><a href="members.html">সদস্যবৃন্দ</a></li>
+                    <li><a href="gallery.html">গ্যালারী</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-actions">
+                    <div class="lang-switcher-wrapper">
+                        <button class="lang-btn active" onclick="changeLanguage('bn')">বাং</button>
+                        <div class="lang-divider"></div>
+                        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                    <!-- Hidden Google Translate Element -->
+                    <div id="google_translate_element" style="display:none"></div>
+                    <a href="registration.html" class="btn btn-primary">সদস্য হোন</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" style="padding: 60px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>সদস্যপদ আবেদন</h2>
+                    <p>লালমনিরহাট জেলা সমিতি, ঢাকা'র সদস্য হতে নিচের যেকোনো একটি সদস্যপদ নির্বাচন করুন।</p>
+                </div>
+
+                <div class="plans-grid" id="plansGrid">
+                    <!-- Plan 1 -->
+                    <div class="plan-card">
+                        <div class="plan-icon"><i class="fas fa-user-graduate"></i></div>
+                        <h3>সাধারণ সদস্য (ছাত্র)</h3>
+                        <div class="price">৫০০/- <small>এককালীন</small></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> বৈধ ছাত্র আইডিকার্ড থাকা আবশ্যক</li>
+                            <li><i class="fas fa-check-circle"></i> সমিতির আয়োজনে অংশগ্রহণ</li>
+                            <li><i class="fas fa-check-circle"></i> নেটওয়ার্কিং সুবিধা</li>
+                        </ul>
+                        <button class="btn-proceed" onclick="showForm('সাধারণ সদস্য (ছাত্র)')">এগিয়ে যান</button>
+                    </div>
+
+                    <!-- Plan 2 -->
+                    <div class="plan-card featured">
+                        <div class="plan-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>সাধারণ সদস্য</h3>
+                        <div class="price">১,০০০/- <small>বার্ষিক</small></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> সকল সাধারণ সুবিধা</li>
+                            <li><i class="fas fa-check-circle"></i> বার্ষিক সাধারণ সভায় অংশগ্রহণ</li>
+                            <li><i class="fas fa-check-circle"></i> ভোটাধিকার সুবিধা</li>
+                        </ul>
+                        <button class="btn-proceed" onclick="showForm('সাধারণ সদস্য')">এগিয়ে যান</button>
+                    </div>
+
+                    <!-- Plan 3 -->
+                    <div class="plan-card">
+                        <div class="plan-icon"><i class="fas fa-crown"></i></div>
+                        <h3>আজীবন সদস্য</h3>
+                        <div class="price">১০,০০০/- <small>এককালীন</small></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> আজীবন সদস্যপদ</li>
+                            <li><i class="fas fa-check-circle"></i> ভিআইপি মর্যাদা ও বিশেষ সম্মান</li>
+                            <li><i class="fas fa-check-circle"></i> সকল ইভেন্টে অগ্রাধিকার</li>
+                        </ul>
+                        <button class="btn-proceed" onclick="showForm('আজীবন সদস্য')">এগিয়ে যান</button>
+                    </div>
+                </div>
+
+                <div id="registrationFormSection" style="display: none;">
+                    <div class="section-header" style="margin-top: 30px;">
+                        <h3 id="selectedPlanTitle" style="color: var(--primary);"></h3>
+                        <p>সঠিক তথ্য দিয়ে নিচের ফরমটি পূরণ করুন।</p>
+                    </div>
+
+                    <!-- Step Indicators -->
+                    <div class="step-wizard">
+                        <div class="step-item active" id="stepIndicator1">
+                            <span class="step-num">১</span>
+                            <span class="step-label">ব্যক্তিগত তথ্য</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step-item" id="stepIndicator2">
+                            <span class="step-num">২</span>
+                            <span class="step-label">ঠিকানা</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step-item" id="stepIndicator3">
+                            <span class="step-num">৩</span>
+                            <span class="step-label">ডকুমেন্টস</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card registration-form-card" style="padding: 40px; margin-top: 30px; border-radius: 24px; background: #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.08);">
+                        <form id="regForm" class="registration-form" onsubmit="handleSubmit(event)">
+                            <input type="hidden" id="membershipType" name="membershipType">
+                            
+                            <!-- Step 1: Personal Information -->
+                            <div class="form-step active" id="step1">
+                                <h4 class="form-section-title"><i class="fas fa-user-circle"></i> ব্যক্তিগত তথ্য</h4>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>পূর্ণ নাম (বাংলায়) <span class="required">*</span></label>
+                                        <input type="text" name="name_bn" placeholder="যেমন: মো: আব্দুর রহমান" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Full Name (In English) <span class="required">*</span></label>
+                                        <input type="text" name="name_en" placeholder="e.g. Md. Abdur Rahman" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>পিতার নাম <span class="required">*</span></label>
+                                        <input type="text" name="father_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>মাতার নাম <span class="required">*</span></label>
+                                        <input type="text" name="mother_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>স্বামী/স্ত্রীর নাম</label>
+                                        <input type="text" name="spouse_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>পেশা <span class="required">*</span></label>
+                                        <select name="occupation" required>
+                                            <option value="">নির্বাচন করুন</option>
+                                            <option value="student">ছাত্র</option>
+                                            <option value="job">চাকরি</option>
+                                            <option value="business">ব্যবসা</option>
+                                            <option value="others">অন্যান্য</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>জন্ম তারিখ <span class="required">*</span></label>
+                                        <input type="date" name="dob" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>রক্তের গ্রুপ</label>
+                                        <select name="blood_group">
+                                            <option value="">নির্বাচন করুন</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="step-actions" style="margin-top: 30px; display: flex; gap: 15px; flex-direction: row-reverse; justify-content: space-between;">
+                                    <button type="button" class="btn btn-primary" onclick="nextStep(2)">পরবর্তী ধাপ <i class="fas fa-chevron-right" style="margin-left: 8px;"></i></button>
+                                    <button type="button" class="btn btn-secondary" onclick="hideForm()"><i class="fas fa-chevron-left" style="margin-right: 8px;"></i> পিছনে যান</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Address Information -->
+                            <div class="form-step" id="step2" style="display: none;">
+                                <h4 class="form-section-title"><i class="fas fa-map-marked-alt"></i> ঠিকানা ও পরিচিতি</h4>
+                                <div class="form-grid">
+                                    <div class="form-group" style="grid-column: span 2;">
+                                        <label>স্থায়ী ঠিকানা <span class="required">*</span></label>
+                                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                                            <input type="text" name="perm_village" placeholder="গ্রাম/রোড" required>
+                                            <input type="text" name="perm_post" placeholder="ডাকঘর" required>
+                                            <input type="text" name="perm_thana" placeholder="থানা" required>
+                                            <input type="text" name="perm_district" placeholder="জেলা" value="লালমনিরহাট" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="grid-column: span 2;">
+                                        <label>বর্তমান ঠিকানা</label>
+                                        <textarea name="present_address" placeholder="বিস্তারিত লিখুন..." style="min-height: 80px;"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>মোবাইল নম্বর <span class="required">*</span></label>
+                                        <input type="tel" name="mobile" placeholder="০১৭XXXXXXXX" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>ইমেইল</label>
+                                        <input type="email" name="email" placeholder="example@gmail.com">
+                                    </div>
+                                    <div class="form-group" style="grid-column: span 2;">
+                                        <label>NID/জন্মনিবন্ধন নম্বর <span class="required">*</span></label>
+                                        <input type="text" name="nid" required>
+                                    </div>
+                                </div>
+                                <div class="step-actions" style="margin-top: 30px; display: flex; gap: 15px; flex-direction: row-reverse; justify-content: space-between;">
+                                    <button type="button" class="btn btn-primary" onclick="nextStep(3)">পরবর্তী ধাপ <i class="fas fa-chevron-right" style="margin-left: 8px;"></i></button>
+                                    <button type="button" class="btn btn-secondary" onclick="nextStep(1)"><i class="fas fa-chevron-left" style="margin-right: 8px;"></i> আগের ধাপ</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Document Upload -->
+                            <div class="form-step" id="step3" style="display: none;">
+                                <h4 class="form-section-title"><i class="fas fa-cloud-upload-alt"></i> প্রয়োজনীয় ডকুমেন্টস ও ফি</h4>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>আপনার ছবি <span class="required">*</span></label>
+                                        <input type="file" name="photo" accept="image/*" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>NID/জন্মনিবন্ধন কপি <span class="required">*</span></label>
+                                        <input type="file" name="nid_copy" accept="image/*,application/pdf" required>
+                                    </div>
+                                </div>
+
+                                <div class="payment-info" id="paymentInfoBox" style="background: #f8fafc; padding: 20px; border-radius: 12px; margin: 30px 0; border: 1px dashed var(--primary);">
+                                    <p style="margin: 0; font-weight: 600; color: var(--secondary);">সদস্য ফি: <span id="feeAmount" style="color: var(--primary); font-size: 1.2rem;">০/-</span></p>
+                                    <input type="hidden" id="feeInput" name="fee">
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label style="display: flex; gap: 10px; cursor: pointer;">
+                                        <input type="checkbox" required style="width: 20px; height: 20px;">
+                                        <span>আমি অঙ্গীকার করিতেছি যে, সমিতির গঠনতন্ত্রের বিধানসমূহ মানিয়া চলিব এবং মঙ্গল বিধানে সচেষ্ট থাকিব।</span>
+                                    </label>
+                                </div>
+
+                                <div class="step-actions" style="margin-top: 30px; display: flex; gap: 15px; flex-direction: row-reverse; justify-content: space-between; border-top: 1px solid #eee; padding-top: 30px;">
+                                    <button type="submit" class="btn btn-primary" style="padding: 15px 50px;">আবেদন জমা দিন <i class="fas fa-check-circle" style="margin-left: 8px;"></i></button>
+                                    <button type="button" class="btn btn-secondary" onclick="nextStep(2)"><i class="fas fa-chevron-left" style="margin-right: 8px;"></i> আগের ধাপ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showForm(plan) {
+            document.getElementById('plansGrid').style.display = 'none';
+            document.getElementById('registrationFormSection').style.display = 'block';
+            document.getElementById('selectedPlanTitle').innerText = plan + ' - নিবন্ধন ফরম';
+            document.getElementById('membershipType').value = plan;
+
+            // Set Fee
+            let feeText = "০/-";
+            let feeVal = 0;
+            if (plan.includes('আজীবন')) {
+                feeText = "১০,০০০/-";
+                feeVal = 10000;
+            } else if (plan === 'সাধারণ সদস্য') {
+                feeText = "১,০০০/-";
+                feeVal = 1000;
+            } else if (plan.includes('ছাত্র')) {
+                feeText = "৫০০/-";
+                feeVal = 500;
+            }
+            document.getElementById('feeAmount').innerText = feeText;
+            document.getElementById('feeInput').value = feeVal;
+
+            nextStep(1);
+            window.scrollTo({ top: 100, behavior: 'smooth' });
+        }
+
+        function hideForm() {
+            document.getElementById('plansGrid').style.display = 'grid';
+            document.getElementById('registrationFormSection').style.display = 'none';
+            window.scrollTo({ top: 100, behavior: 'smooth' });
+        }
+
+        function nextStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.form-step').forEach(s => s.style.display = 'none');
+            // Show target step
+            document.getElementById('step' + step).style.display = 'block';
+            
+            // Update Indicators
+            document.querySelectorAll('.step-item').forEach((item, idx) => {
+                if (idx + 1 === step) item.classList.add('active');
+                else item.classList.remove('active');
+                
+                if (idx + 1 < step) item.classList.add('completed');
+                else item.classList.remove('completed');
+            });
+
+            window.scrollTo({ top: 250, behavior: 'smooth' });
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('আপনার আবেদনটি সফলভাবে জমা হয়েছে। শীঘ্রই আপনার সাথে যোগাযোগ করা হবে।');
+            hideForm();
+        }
+    </script>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-box" style="margin-bottom: 20px;">
+                        <img src="./assets/img/logo.png" alt="LZSD Logo" style="height: 80px; width: auto;">
+                    </div>
+                    <h3>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></h3>
+                    <p>হৃদয় থেকে শিকড়ের টান। ১৯৮১ সাল থেকে আপনাদের পাশে। আমরা ঢাকায় বসবাসরত লালমনিরহাটের সকল অধিবাসীদের একতাবদ্ধ করতে এবং জেলার উন্নয়নে প্রতিশ্রুতিবদ্ধ। লালমনিরহাটের ঐতিহ্য ও সংস্কৃতিকে তুলে ধরাই আমাদের মূল লক্ষ্য।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>দ্রুত লিঙ্ক</h4>
+                    <ul>
+                        <li><a href="index.html">প্রচ্ছদ</a></li>
+                        <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                        <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                        <li><a href="projects.html">আমাদের প্রকল্পসমূহ</a></li>
+                        <li><a href="registration.html">সদস্য পদ আবেদন</a></li>
+                        <li><a href="gallery.html">গ্যালারী</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>যোগাযোগ</h4>
+                    <p><i class="fas fa-map-marker-alt" style="color: white;"></i> ২১৮, স্যুট নং- ১২০৩-এ, সাহেরা ট্রপিক্যাল সেন্টার, Elephant Road, ঢাকা।</p>
+                    <p><i class="fas fa-phone-alt" style="color: white;"></i> ০১৭১৭-২২৯৪৬০</p>
+                    <p><i class="fas fa-envelope" style="color: white;"></i> shah.bangla15@gmail.com</p>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.285194539126!2d90.3833213!3d23.7371511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8dc4c8a0051%3A0xe5a3c0e359400000!2sElephant%20Road%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ লালমনিরহাট জেলা সমিতি, ঢাকা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'bn',
+                includedLanguages: 'en,bn',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

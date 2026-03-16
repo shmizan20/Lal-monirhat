@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কার্যনির্বাহী কমিটি | লালমনিরহাট জেলা সমিতি, ঢাকা</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script></head>
+
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="scroll-progress"></div><div class="news-ticker">
+                    <span class="ticker-label">Notice:</span>
+                    <div class="ticker-content">
+                        আমাদের বর্তমান কার্যনির্বাহী কমিটির সম্মানিত সদস্যবৃন্দ।
+                    </div>
+                </div>
+                <div class="top-contacts"><a href="tel:01717229460"><i class="fas fa-phone-alt"></i> ০১৭১৭-২২৯৪৬০</a>
+                    <a href="mailto:shah.bangla15@gmail.com"><i class="fas fa-envelope"></i> shah.bangla15@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="./assets/img/logo.png" alt="LZSD Logo">
+                    <span>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">প্রচ্ছদ</a></li>
+                    <li class="dropdown">
+                        <a href="#">সমিতি সম্পর্কে <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                            <li><a href="history.html">সমিতির প্রতিষ্ঠার কথা</a></li>
+                            <li><a href="founder-president.html">প্রতিষ্ঠাতা সভাপতি</a></li>
+                            <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                            <li><a href="./assets/gothontontro.pdf" download><i class="fas fa-download" style="margin-right:6px;color:var(--primary)"></i>গঠনতন্ত্র ডাউনলোড</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">প্রকল্প সমূহ</a></li>
+                    <li><a href="registration.html">সদস্যপদ</a></li>
+                    <li><a href="members.html">সদস্যবৃন্দ</a></li>
+                    <li><a href="gallery.html">গ্যালারী</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-actions">
+                    <div class="lang-switcher-wrapper">
+                        <button class="lang-btn active" onclick="changeLanguage('bn')">বাং</button>
+                        <div class="lang-divider"></div>
+                        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                    <!-- Hidden Google Translate Element -->
+                    <div id="google_translate_element" style="display:none"></div>
+                    <a href="registration.html" class="btn btn-primary">সদস্য হোন</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" style="padding: 100px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>কার্যনির্বাহী কমিটি</h2>
+                    <p>সক্রিয় নেতৃত্বে সমিতির উন্নয়ন কর্মসূচী বেগবান রাখছেন যাঁরা।</p>
+                </div>
+
+                <div class="committee-grid" style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
+                    <!-- President -->
+                    <div class="member-card">
+                        <div class="member-image-box">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="President"
+                                style="width: 100%; height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="member-details">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 5px;">সুলতানা ইয়াসমীন</h3>
+                            <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem; margin-bottom: 5px;">সভাপতি</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">লালমনিরহাট জেলা সমিতি, ঢাকা</p>
+                        </div>
+                    </div>
+
+                    <!-- General Secretary -->
+                    <div class="member-card">
+                        <div class="member-image-box">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80" alt="General Secretary"
+                                style="width: 100%; height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="member-details">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 5px;">জনাব মো: শাহজাহান আলী</h3>
+                            <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem; margin-bottom: 5px;">সাধারণ সম্পাদক</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">লালমনিরহাট জেলা সমিতি, ঢাকা</p>
+                        </div>
+                    </div>
+
+                    <!-- Vice President -->
+                    <div class="member-card">
+                        <div class="member-image-box">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80" alt="Vice President"
+                                style="width: 100%; height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="member-details">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 5px;">জনাব আহমেদ উল্লাহ</h3>
+                            <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem; margin-bottom: 5px;">সহ-সভাপতি</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">লালমনিরহাট জেলা সমিতি, ঢাকা</p>
+                        </div>
+                    </div>
+
+                    <!-- Treasurer -->
+                    <div class="member-card">
+                        <div class="member-image-box">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80" alt="Treasurer"
+                                style="width: 100%; height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="member-details">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 5px;">জনাব মোহাম্মাদ আলী</h3>
+                            <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem; margin-bottom: 5px;">কোষাধ্যক্ষ</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">লালমনিরহাট জেলা সমিতি, ঢাকা</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-box" style="margin-bottom: 20px;">
+                        <img src="./assets/img/logo.png" alt="LZSD Logo" style="height: 80px; width: auto;">
+                    </div>
+                    <h3>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></h3>
+                    <p>হৃদয় থেকে শিকড়ের টান। ১৯৮১ সাল থেকে আপনাদের পাশে। আমরা ঢাকায় বসবাসরত লালমনিরহাটের সকল অধিবাসীদের একতাবদ্ধ করতে এবং জেলার উন্নয়নে প্রতিশ্রুতিবদ্ধ। লালমনিরহাটের ঐতিহ্য ও সংস্কৃতিকে তুলে ধরাই আমাদের মূল লক্ষ্য।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>দ্রুত লিঙ্ক</h4>
+                    <ul>
+                        <li><a href="index.html">প্রচ্ছদ</a></li>
+                        <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                        <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                        <li><a href="projects.html">আমাদের প্রকল্পসমূহ</a></li>
+                        <li><a href="registration.html">সদস্য পদ আবেদন</a></li>
+                        <li><a href="gallery.html">গ্যালারী</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>যোগাযোগ</h4>
+                    <p><i class="fas fa-map-marker-alt" style="color: white;"></i> ২১৮, স্যুট নং- ১২০৩-এ, সাহেরা ট্রপিক্যাল সেন্টার, Elephant Road, ঢাকা।</p>
+                    <p><i class="fas fa-phone-alt" style="color: white;"></i> ০১৭১৭-২২৯৪৬০</p>
+                    <p><i class="fas fa-envelope" style="color: white;"></i> shah.bangla15@gmail.com</p>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.285194539126!2d90.3833213!3d23.7371511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8dc4c8a0051%3A0xe5a3c0e359400000!2sElephant%20Road%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ লালমনিরহাট জেলা সমিতি, ঢাকা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

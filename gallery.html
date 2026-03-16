@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>গ্যালারী | লালমনিরহাট জেলা সমিতি, ঢাকা</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script></head>
+
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="scroll-progress"></div><div class="news-ticker">
+                    <span class="ticker-label">Notice:</span>
+                    <div class="ticker-content">
+                        আমাদের বিভিন্ন সাংস্কৃতিক ও সামাজিক কর্মকাণ্ডের স্থিরচিত্র।
+                    </div>
+                </div>
+                <div class="top-contacts"><a href="tel:01717229460"><i class="fas fa-phone-alt"></i> ০১৭১৭-২২৯৪৬০</a>
+                    <a href="mailto:shah.bangla15@gmail.com"><i class="fas fa-envelope"></i> shah.bangla15@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="./assets/img/logo.png" alt="LZSD Logo">
+                    <span>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">প্রচ্ছদ</a></li>
+                    <li class="dropdown">
+                        <a href="#">সমিতি সম্পর্কে <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                            <li><a href="history.html">সমিতির প্রতিষ্ঠার কথা</a></li>
+                            <li><a href="founder-president.html">প্রতিষ্ঠাতা সভাপতি</a></li>
+                            <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                            <li><a href="./assets/gothontontro.pdf" download><i class="fas fa-download" style="margin-right:6px;color:var(--primary)"></i>গঠনতন্ত্র ডাউনলোড</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">প্রকল্প সমূহ</a></li>
+                    <li><a href="registration.html">সদস্যপদ</a></li>
+                    <li><a href="members.html">সদস্যবৃন্দ</a></li>
+                    <li><a href="gallery.html" class="active">গ্যালারী</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-actions">
+                    <div class="lang-switcher-wrapper">
+                        <button class="lang-btn active" onclick="changeLanguage('bn')">বাং</button>
+                        <div class="lang-divider"></div>
+                        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                    <!-- Hidden Google Translate Element -->
+                    <div id="google_translate_element" style="display:none"></div>
+                    <a href="registration.html" class="btn btn-primary">সদস্য হোন</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" style="padding: 80px 0 100px;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>গ্যালারী</h2>
+                    <p>আমাদের বিভিন্ন আয়োজন, স্মরণীয় মুহূর্ত এবং লালমনিরহাটের সৌন্দর্যের সংকলন।</p>
+                </div>
+
+                <!-- Toggle Buttons -->
+                <div class="gallery-toggle">
+                    <button class="toggle-btn active" id="btnPhoto" onclick="showGallery('photo')">
+                        <i class="fas fa-images"></i> ফটো গ্যালারী
+                    </button>
+                    <button class="toggle-btn" id="btnVideo" onclick="showGallery('video')">
+                        <i class="fas fa-video"></i> ভিডিও গ্যালারী
+                    </button>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div id="photoGallery" class="gallery-section">
+                    <div class="photo-grid">
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c060205e7.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c0817ccb7.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-২" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-২</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c0ae92382.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-১" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-১</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c0dc771e1.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-৩" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-৩</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c0ee1a2a2.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-৪" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-৪</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c12ba28d9.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-৪ (বি)" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-৪ (বি)</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c13fa9517.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-৫" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-৫</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c166dbe3d.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-৬" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-৬</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c197b9c27.jpeg" alt="ফলাফল ঘোষনা অনুষ্ঠান-৭" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">ফলাফল ঘোষনা অনুষ্ঠান-৭</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c0265fe6c.jpeg" alt="সভা-২" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">সভা-২</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/68f3c0069b0c3.jpeg" alt="সভা-১" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">সভা-১</div>
+                        </div>
+                        <div class="photo-item" onclick="openLightbox(this)">
+                            <div class="photo-img-wrap">
+                                <img src="https://www.lzsd.org/public/photos_gallery/6884aa2d1013e.webp" alt="মতবিনিময় সভা-৩" loading="lazy">
+                                <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="photo-caption">মতবিনিময় সভা-৩</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Gallery -->
+                <div id="videoGallery" class="gallery-section" style="display:none;">
+                    <div class="video-grid">
+                        <div class="video-card-gallery">
+                            <div class="video-thumb" onclick="playVideo(this, 'y_w4Pr6QM0Y')">
+                                <img src="https://img.youtube.com/vi/y_w4Pr6QM0Y/hqdefault.jpg" alt="Video">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="video-info"><h4>One day in Lalmonirhat district</h4></div>
+                        </div>
+
+                        <div class="video-card-gallery">
+                            <div class="video-thumb" onclick="playVideo(this, 'jj2cY-Vvuy8')">
+                                <img src="https://img.youtube.com/vi/jj2cY-Vvuy8/hqdefault.jpg" alt="Video">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="video-info"><h4>Top 10 Tourist Places of Lalmonirhat</h4></div>
+                        </div>
+
+                        <div class="video-card-gallery">
+                            <div class="video-thumb" onclick="playVideo(this, 'OtbnrxOoA9k')">
+                                <img src="https://img.youtube.com/vi/OtbnrxOoA9k/hqdefault.jpg" alt="Video">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="video-info"><h4>Beautiful Lalmonirhat</h4></div>
+                        </div>
+
+                        <div class="video-card-gallery">
+                            <div class="video-thumb" onclick="playVideo(this, 'kkecWrWg1a0')">
+                                <img src="https://img.youtube.com/vi/kkecWrWg1a0/hqdefault.jpg" alt="Video">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="video-info"><h4>Lalmonirhat City</h4></div>
+                        </div>
+
+                        <div class="video-card-gallery">
+                            <div class="video-thumb" onclick="playVideo(this, 'y_w4Pr6QM0Y')">
+                                <img src="https://img.youtube.com/vi/y_w4Pr6QM0Y/hqdefault.jpg" alt="Video">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="video-info"><h4>Lalmonirhat Travel Guide</h4></div>
+                        </div>
+
+                        <div class="video-card-gallery">
+                            <div class="video-thumb" onclick="playVideo(this, 'jj2cY-Vvuy8')">
+                                <img src="https://img.youtube.com/vi/jj2cY-Vvuy8/hqdefault.jpg" alt="Video">
+                                <div class="play-btn"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="video-info"><h4>Best of Lalmonirhat</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Photo Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <img id="lightboxImg" src="" alt="">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Video Lightbox/Modal -->
+    <div id="videoModal" class="lightbox" onclick="closeVideoModal()">
+        <button class="lightbox-close" onclick="closeVideoModal()"><i class="fas fa-times"></i></button>
+        <div class="video-modal-container" id="videoContainer" onclick="event.stopPropagation()">
+            <!-- Iframe will be injected here -->
+        </div>
+    </div>
+
+    <script>
+        function showGallery(type) {
+            const photoGallery = document.getElementById('photoGallery');
+            const videoGallery = document.getElementById('videoGallery');
+            const btnPhoto = document.getElementById('btnPhoto');
+            const btnVideo = document.getElementById('btnVideo');
+
+            if (type === 'photo') {
+                photoGallery.style.display = 'block';
+                videoGallery.style.display = 'none';
+                btnPhoto.classList.add('active');
+                btnVideo.classList.remove('active');
+            } else {
+                photoGallery.style.display = 'none';
+                videoGallery.style.display = 'block';
+                btnVideo.classList.add('active');
+                btnPhoto.classList.remove('active');
+            }
+        }
+
+        function playVideo(el, videoId) {
+            const modal = document.getElementById('videoModal');
+            const container = document.getElementById('videoContainer');
+            
+            // Re-creating the iframe from scratch is more stable for localhost
+            // Adding mute=1 is essential for autoplay and to avoid configuration errors
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&rel=0`;
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            
+            container.innerHTML = ''; // Clear old content
+            container.appendChild(iframe);
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = ''; // Stop video by removing iframe
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function openLightbox(el) {
+            const img = el.querySelector('img');
+            const caption = el.querySelector('.photo-caption');
+            document.getElementById('lightboxImg').src = img.src;
+            document.getElementById('lightboxCaption').textContent = caption.textContent;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-box" style="margin-bottom: 20px;">
+                        <img src="./assets/img/logo.png" alt="LZSD Logo" style="height: 80px; width: auto;">
+                    </div>
+                    <h3>লালমনিরহাট জেলা সমিতি <small>ঢাকা</small></h3>
+                    <p>হৃদয় থেকে শিকড়ের টান। ১৯৮১ সাল থেকে আপনাদের পাশে। আমরা ঢাকায় বসবাসরত লালমনিরহাটের সকল অধিবাসীদের একতাবদ্ধ করতে এবং জেলার উন্নয়নে প্রতিশ্রুতিবদ্ধ। লালমনিরহাটের ঐতিহ্য ও সংস্কৃতিকে তুলে ধরাই আমাদের মূল লক্ষ্য।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>দ্রুত লিঙ্ক</h4>
+                    <ul>
+                        <li><a href="index.html">প্রচ্ছদ</a></li>
+                        <li><a href="about-district.html">লালমনিরহাট জেলা সম্পর্কিত</a></li>
+                        <li><a href="executive-committee.html">কার্যনির্বাহী কমিটি</a></li>
+                        <li><a href="projects.html">আমাদের প্রকল্পসমূহ</a></li>
+                        <li><a href="registration.html">সদস্য পদ আবেদন</a></li>
+                        <li><a href="gallery.html">গ্যালারী</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>যোগাযোগ</h4>
+                    <p><i class="fas fa-map-marker-alt" style="color: white;"></i> ২১৮, স্যুট নং- ১২০৩-এ, সাহেরা ট্রপিক্যাল সেন্টার, Elephant Road, ঢাকা।</p>
+                    <p><i class="fas fa-phone-alt" style="color: white;"></i> ০১৭১৭-২২৯৪৬০</p>
+                    <p><i class="fas fa-envelope" style="color: white;"></i> shah.bangla15@gmail.com</p>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.285194539126!2d90.3833213!3d23.7371511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8dc4c8a0051%3A0xe5a3c0e359400000!2sElephant%20Road%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ লালমনিরহাট জেলা সমিতি, ঢাকা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1698,6 +1698,28 @@ ul {
 
     .mobile-menu-btn {
         display: flex;
+        order: -1; /* Move to the left */
+        margin-right: 15px; /* Space between hamburger and logo */
+    }
+
+    .logo {
+        margin-right: auto; /* Push the action button to the right */
+        font-size: 1.1rem; /* Smaller font for small screens */
+        gap: 8px;
+    }
+
+    .logo img {
+        height: 36px; /* Smaller logo for mobile */
+    }
+
+    .nav-actions {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .nav-actions .btn {
+        padding: 8px 15px; /* Smaller button for mobile */
+        font-size: 0.85rem;
     }
 
     .nav-links {

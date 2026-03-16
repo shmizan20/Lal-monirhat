@@ -1,3 +1,4 @@
+/* main.js */
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Lenis (Super Smooth Scroll)
     const lenis = new Lenis({
@@ -7,32 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
         wheelMultiplier: 1,
         normalizeWheel: true,
         smoothTouch: false,
-    })
+    });
 
     function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf)
+    requestAnimationFrame(raf);
 
     // 2. Scroll Progress Bar & Header Effect
     const header = document.querySelector('.main-header');
     const progressBar = document.querySelector('.scroll-progress');
 
-    lenis.on('scroll', (e) => {
-        // Header Effect
-        if (e.animatedScroll > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+    if (lenis && header) {
+        lenis.on('scroll', (e) => {
+            if (e.animatedScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
 
-        // Progress Bar
-        const scrollPercent = (e.animatedScroll / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        if (progressBar) {
-            progressBar.style.width = `${scrollPercent}%`;
-        }
-    });
+            const scrollPercent = (e.animatedScroll / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (progressBar) {
+                progressBar.style.width = `${scrollPercent}%`;
+            }
+        });
+    }
 
     // 3. Mobile Menu Toggle
     const menuBtn = document.getElementById('menuBtn');
@@ -43,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('active');
             menuBtn.classList.toggle('active');
 
-            // Animate hamburger lines
             const spans = menuBtn.querySelectorAll('span');
             if (menuBtn.classList.contains('active')) {
                 spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -61,30 +61,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('a');
-        link.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                const menu = dropdown.querySelector('.dropdown-menu');
-                if (menu) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
+        if (link) {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    const menu = dropdown.querySelector('.dropdown-menu');
+                    if (menu) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 
     // 4. Intersection Observer for Scroll Animations
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('revealed');
             } else {
-                // Elements that are out of view (both above and below) get reset
-                // Checking boundingClientRect to see if it's truly beyond the margin
                 const rect = entry.boundingClientRect;
                 if (rect.top > window.innerHeight || rect.bottom < 0) {
                     entry.target.classList.remove('revealed');
@@ -92,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { 
-        threshold: 0.01, // Detect as soon as a tiny part enters
-        rootMargin: '-5% 0px -5% 0px' // Buffer to prevent flickering
+        threshold: 0.01,
+        rootMargin: '-5% 0px -5% 0px'
     });
 
     const elementsToAnimate = document.querySelectorAll(
@@ -107,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // 5. Smooth scroll for anchors (Connected to Lenis)
+    // 5. Smooth scroll for anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
@@ -122,95 +117,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Language Switcher & Translator Logic
+/* Language Switcher & Translator Logic */
+
+// Global Initialization for Google Translate
 window.googleTranslateElementInit = function() {
     new google.translate.TranslateElement({
         pageLanguage: 'bn',
         includedLanguages: 'en,bn',
-        autoDisplay: false
+        autoDisplay: false,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
+};
+
+function setTranslateCookie(lang) {
+    const domain = window.location.hostname;
+    const cookieValue = `/bn/${lang}`;
+    document.cookie = `googtrans=${cookieValue}; path=/;`;
+    document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain};`;
+    
+    // Support for subdomains and apex domains
+    const domainParts = domain.split('.');
+    if (domainParts.length > 2) {
+        const rootDomain = domainParts.slice(-2).join('.');
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=.${rootDomain};`;
+    }
 }
 
-// Dynamic script injection
-(function() {
-    if (!document.getElementById('google-translate-script')) {
-        const script = document.createElement('script');
-        script.id = 'google-translate-script';
-        script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-        document.head.appendChild(script);
-    }
-})();
-
-// Set cookie for Google Translate
-function setTranslateCookie(lang) {
-    document.cookie = `googtrans=/bn/${lang}; path=/;`;
-    document.cookie = `googtrans=/bn/${lang}; path=/; domain=${window.location.hostname};`;
+function syncLangUI(lang) {
+    console.log('[Lang] Syncing UI to:', lang);
+    const btns = document.querySelectorAll('.lang-btn');
+    btns.forEach(btn => {
+        const btnLang = btn.getAttribute('data-lang');
+        if (btnLang === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 }
 
 function changeLanguage(lang) {
     if (!lang) return;
     
-    // 1. Set Storage & Cookie
+    console.log('[Lang] changeLanguage called with:', lang);
     localStorage.setItem('selectedLang', lang);
     setTranslateCookie(lang);
+    syncLangUI(lang);
 
-    // 2. Update UI (All instances across page)
-    const btns = document.querySelectorAll('.lang-btn');
-    btns.forEach(btn => {
-        const label = btn.innerText.toLowerCase();
-        const isTarget = (lang === 'bn' && (label.includes('বাং') || label.includes('bn'))) || 
-                         (lang === 'en' && label.includes('en'));
-        btn.classList.toggle('active', isTarget);
-    });
-
-    // 3. Trigger Translation
     const select = document.querySelector('.goog-te-combo');
     if (select) {
+        console.log('[Lang] Found widget, switching select value');
         select.value = lang;
         select.dispatchEvent(new Event('change'));
     } else {
-        // Force hash and reload if widget not ready
+        console.log('[Lang] Widget not found, using hash and reload');
         const targetHash = `#googtrans(bn|${lang})`;
         if (window.location.hash !== targetHash) {
             window.location.hash = targetHash;
-            location.reload();
+            // Force reload to let Google Translate read the hash/cookie
+            setTimeout(() => location.reload(), 100);
         }
     }
 }
 
-// Check for saved language on load
+// Initial Sync & Polling for Widget
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLang') || 'bn';
-    
-    // Always sync UI on load
-    const syncUI = (lang) => {
-        const btns = document.querySelectorAll('.lang-btn');
-        btns.forEach(btn => {
-            const label = btn.innerText.toLowerCase();
-            const isTarget = (lang === 'bn' && (label.includes('বাং') || label.includes('bn'))) || 
-                             (lang === 'en' && label.includes('en'));
-            btn.classList.toggle('active', isTarget);
-        });
-    };
-
-    syncUI(savedLang);
+    console.log('[Lang] DOMContentLoaded state:', savedLang);
+    syncLangUI(savedLang);
 
     if (savedLang !== 'bn') {
-        // Retry logic for Google Translate element
-        let retries = 0;
-        const maxRetries = 10;
+        let attempts = 0;
+        const maxAttempts = 40; // 20 seconds
         
-        const initTranslate = () => {
+        const checkAndApply = () => {
             const select = document.querySelector('.goog-te-combo');
             if (select) {
+                console.log('[Lang] Widget ready, applying saved lang:', savedLang);
                 select.value = savedLang;
                 select.dispatchEvent(new Event('change'));
-            } else if (retries < maxRetries) {
-                retries++;
-                setTimeout(initTranslate, 500);
+            } else if (attempts < maxAttempts) {
+                attempts++;
+                setTimeout(checkAndApply, 500);
             }
         };
-        
-        setTimeout(initTranslate, 1000);
+        // Delay slightly to give the engine time to load
+        setTimeout(checkAndApply, 1500);
     }
 });
+
+// Dynamic Script Injection - more robust
+(function() {
+    if (!document.getElementById('google-translate-script')) {
+        const script = document.createElement('script');
+        script.id = 'google-translate-script';
+        script.async = true;
+        script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(script);
+    }
+})();

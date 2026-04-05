@@ -1,12 +1,10 @@
 // Hero Slider Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.hero-slider .slide');
-    const dots = document.querySelectorAll('.slider-dots .dot');
-    let currentSlide = 0;
-    const slideInterval = 5000; // 5 seconds
+const slides = document.querySelectorAll('.hero-slider .slide');
+const dots = document.querySelectorAll('.slider-dots .dot');
+let currentSlide = 0;
+const slideInterval = 5000; // 5 seconds
 
-    if (slides.length === 0) return;
-
+if (slides.length > 0) {
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
@@ -36,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
             timer = setInterval(nextSlide, slideInterval);
         });
     });
-});
+}
+

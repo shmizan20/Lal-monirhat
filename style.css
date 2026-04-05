@@ -162,7 +162,7 @@ ul {
 .main-header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
@@ -479,6 +479,17 @@ ul {
     background: var(--primary);
     width: 30px;
     border-radius: 10px;
+}
+
+/* Global Container Responsive Padding */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
 }
 
 /* Floating Elements Inspired by Sparrow.ai */
@@ -1698,52 +1709,78 @@ ul {
 
     .mobile-menu-btn {
         display: flex;
-        order: -1; /* Move to the left */
-        margin-right: 15px; /* Space between hamburger and logo */
+        order: -1; 
+        margin-right: 15px;
+        z-index: 2001; /* Higher than nav-links */
+    }
+
+    /* Hamburger Animation in CSS */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 
     .logo {
-        margin-right: auto; /* Push the action button to the right */
-        font-size: 1.1rem; /* Smaller font for small screens */
-        gap: 8px;
+        margin-right: auto;
+        font-size: 1.05rem;
+        gap: 6px;
     }
 
     .logo img {
-        height: 36px; /* Smaller logo for mobile */
+        height: 32px;
     }
 
     .nav-actions {
         margin-right: 0;
-        margin-left: 10px;
+        margin-left: 5px;
     }
 
     .nav-actions .btn {
-        padding: 8px 15px; /* Smaller button for mobile */
-        font-size: 0.85rem;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        border-radius: 30px;
     }
 
     .nav-links {
         position: fixed;
-        padding: 80px 40px;
+        padding: 100px 30px 40px;
         top: 0;
-        left: -100%;
-        width: 80%;
+        right: -100%; /* Slide from right for better reach */
+        left: auto;
+        width: 100%;
         height: 100vh;
         background: var(--white);
         flex-direction: column;
-        transition: var(--transition);
-        z-index: 100;
-        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 3000; /* Higher than header (2000) */
+        box-shadow: none;
+        overflow-y: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
     }
 
     .nav-links.active {
-        left: 0;
+        right: 0;
     }
 
     .nav-links li {
         width: 100%;
         border-bottom: 1px solid #f1f5f9;
+        padding: 5px 0;
+    }
+    
+    .nav-links li a {
+        font-size: 1.1rem;
         padding: 10px 0;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .dropdown-menu {
@@ -1753,11 +1790,34 @@ ul {
         transform: none;
         box-shadow: none;
         display: none;
-        padding-left: 20px;
+        padding: 10px 0 10px 20px;
+        width: 100%;
+        background: #f8fafc;
+        border-top: none;
+        border-radius: 0;
     }
 
     .dropdown.active .dropdown-menu {
         display: block;
+    }
+    
+    /* Hero Title Subpage Responsive */
+    .hero-subpage h1 {
+        font-size: 2rem !important;
+        padding: 0 15px;
+    }
+    
+    /* Stats Gap Fix */
+    .stats-grid {
+        gap: 15px;
+    }
+    
+    .stat-item {
+        padding: 25px 15px;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
     }
 }
 
@@ -2328,6 +2388,27 @@ ul {
 .step-actions .btn {
     flex: 1;
     justify-content: center;
+}
+
+/* Extra Responsive Tweaks */
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 25px 20px !important;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .registration-form, .contact-form {
+        padding: 20px 15px !important;
+    }
+    
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
 }
 
 /* Subpage Content Rows */
